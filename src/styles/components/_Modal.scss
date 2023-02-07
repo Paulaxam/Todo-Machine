@@ -1,0 +1,77 @@
+.modal {
+    font-family: $Font1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    background-color: #b2afffc4;
+    &__container {
+        width: 70%;
+        max-width: 360px;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
+        background-color: $light-color;
+        @include border-format(20px);
+        @include shadowTodo;
+        &--input {
+            font-family: $Font1;
+            width: 80%;
+            height: auto;
+            min-height: 80px;
+            resize: none;
+            color: $dark-color;
+            padding: 8px;
+            @include font-size(28px);
+            @include border-format(20px);
+            @include shadowTodo;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: $terciary-color $primary-color;
+            overflow-x: hidden;
+            &::placeholder {
+                color: $secondary-color;
+            }
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+              
+            &::-webkit-scrollbar-track {
+                background: transparent;
+                border-radius: 20px;
+            }
+              
+            &::-webkit-scrollbar-thumb {
+                background-color: $terciary-color;
+                border-radius: 20px;
+                filter: blur(1px);
+            }
+        }
+        &--btns {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            img {
+                width: 80px;
+                height: 80px;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    filter: drop-shadow(5px 5px 2px rgba(16, 16, 16, 0.65));
+                    transform: scale(1.1);
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}

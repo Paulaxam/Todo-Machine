@@ -1,0 +1,16 @@
+.emptyView{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    @include font-size(36px);
+    img {
+        width: 110px;
+        height: 110px;
+    }
+    filter: drop-shadow(2px 2px 1px $secondary-color);
+}

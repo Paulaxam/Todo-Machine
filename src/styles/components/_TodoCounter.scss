@@ -1,0 +1,10 @@
+h1 {
+    font-family: $Font2;
+    @include font-size(44px);
+    text-align: center;
+}
+.todoCounter {
+    font-family: $Font2;
+    text-align: center;
+    @include font-size(24px);
+}

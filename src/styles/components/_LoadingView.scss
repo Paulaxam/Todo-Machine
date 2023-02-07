@@ -1,0 +1,27 @@
+.loadingView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    gap: 12px;
+    filter: drop-shadow(2px 2px 1px $secondary-color);
+    @include font-size(36px);
+    img {
+        width: 90px;
+        height: 90px;
+        transform: scale(1);
+        animation: loading 1.8s ease-in alternate forwards;
+        transition: all 1.5s ease-in-out;
+    }
+}
+
+@keyframes loading {
+    0% { transform: scale(.2); }
+    25% { transform: scale(.4); }
+    50% { transform: scale(0.6); }
+    75% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,50 @@
+.todoList {
+    width: 100%;
+    height: 65%;
+    padding-top: 24px;
+    ul {
+        width: 90%;
+        height: 100%;
+        padding-bottom: 70px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: safe flex-start;
+        flex-flow: column;
+        margin: 0 auto;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: $terciary-color $primary-color;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      *::-webkit-scrollbar-track {
+        background: $primary-color;
+        border-radius: 20px;
+      }
+      
+      *::-webkit-scrollbar-thumb {
+        background-color: $terciary-color;
+        border-radius: 20px;
+        filter: blur(1px);
+      }
+}
+
+
+p.msg {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  filter: drop-shadow(2px 2px 1px $secondary-color);
+  @include font-size(36px);
+  &--error {
+    color: #ef4823;
+    filter: drop-shadow(2px 2px 1px $dark-color);
+  }
+}
+
+
+ 

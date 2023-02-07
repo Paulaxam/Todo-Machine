@@ -1,0 +1,56 @@
+$primary-color: #B1AFFF;
+$secondary-color: #75cef5;
+$terciary-color: #38b47b;
+$light-color: #FDFDBD;
+$dark-color: #0a0a0a;
+$withe-color: #fff;
+
+$Font1: 'Shadows Into Light', cursive;
+$Font2: 'Amatic SC', cursive;
+
+@function calculateRem($size) {
+    $remSize: $size/16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+    line-height: calculateRem($size) *1.5;
+}
+
+@mixin border-format($radio) {
+    border: 2px solid rgba(0, 0, 0, 0.726);
+    border-radius: $radio;
+}
+
+@mixin shadowTodo(){
+    filter: drop-shadow(8px 8px 1px $terciary-color);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: $secondary-color;
+    font-family: $Font1;
+    @include font-size(20px);
+    #root {
+        position: relative;
+        width: 90%;
+        height: 90vh;
+        min-height: 600px;
+        max-width: 520px;
+        min-width: 300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        box-shadow: 10px 10px 20px 0px rgba(3, 3, 3, 0.699),
+                    -10px 10px 20px 0px rgba(3, 3, 3, 0.699);
+        background-color: $light-color;
+        @include border-format(20px);
+    }
+}

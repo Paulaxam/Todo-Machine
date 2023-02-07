@@ -1,0 +1,30 @@
+.todoSearch_container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+    .todoSearch {
+        position: relative;
+        width: 70%;
+        height: 40px;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-weight: bold;
+        padding: 0 8px;
+        z-index: 10;
+        padding-left: 18px;
+        background-color: $withe-color;
+        font-family: $Font1;
+        color: $dark-color;
+        @include border-format(12px);
+        @include font-size(18px);
+        @include shadowTodo;
+    }
+}
+
+
+
+input::placeholder {
+    color: $primary-color;
+}
