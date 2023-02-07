@@ -1,9 +1,6 @@
 import React from "react";
-import { TodoContext } from "../TodoContext/TodoContext";
 
-function TodoCounter() {
-  const { totalTodos, completedTodos } = React.useContext(TodoContext);
-
+function TodoCounter({ totalTodos, completedTodos }) {
   return (
     <React.Fragment>
       <h1>¿Qué quieres hacer hoy?</h1>

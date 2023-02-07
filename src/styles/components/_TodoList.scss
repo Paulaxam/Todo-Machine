@@ -14,7 +14,7 @@
         overflow: scroll;
         scroll-behavior: smooth;
         scrollbar-width: thin;
-        scrollbar-color: $terciary-color $primary-color;
+        scrollbar-color: $terciary-color transparent;
         overflow-x: hidden;
     }
     ::-webkit-scrollbar {
@@ -22,7 +22,7 @@
       }
       
       *::-webkit-scrollbar-track {
-        background: $primary-color;
+        background: transparent;
         border-radius: 20px;
       }
       
@@ -33,18 +33,6 @@
       }
 }
 
-
-p.msg {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  filter: drop-shadow(2px 2px 1px $secondary-color);
-  @include font-size(36px);
-  &--error {
-    color: #ef4823;
-    filter: drop-shadow(2px 2px 1px $dark-color);
-  }
-}
 
 
  

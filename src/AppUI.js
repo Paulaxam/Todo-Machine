@@ -10,6 +10,8 @@ import { Modal } from "./components/Modal";
 import { LoadingView } from "./components/LoadingView";
 import { EmptyView } from "./components/EmptyView";
 import { ErrorView } from "./components/ErrorView";
+import { TodoHeader } from "./components/TodoHeader";
+import { TodoForm } from "./components/TodoForm";
 
 function AppUI() {
   const {
@@ -20,12 +22,19 @@ function AppUI() {
     deleteTodos,
     openModal,
     setOpenModal,
+    totalTodos,
+    completedTodos,
+    searchValue,
+    setSearchValue,
+    addTodos,
   } = React.useContext(TodoContext);
 
   return (
     <React.Fragment>
-      <TodoCounter />
-      <TodoSearch />
+      <TodoHeader>
+        <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
+        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+      </TodoHeader>
 
       <TodoList>
         {error && <ErrorView />}
@@ -46,7 +55,13 @@ function AppUI() {
 
       {!openModal && document.getElementById("modal").classList.add("hidden")}
 
-      {openModal && createPortal(<Modal />, document.getElementById("modal"))}
+      {openModal &&
+        createPortal(
+          <Modal>
+            <TodoForm setOpenModal={setOpenModal} addTodos={addTodos} />
+          </Modal>,
+          document.getElementById("modal")
+        )}
 
       <CreateTodoButton setOpenModal={setOpenModal} />
     </React.Fragment>

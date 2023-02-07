@@ -1,9 +1,6 @@
 import React from "react";
-import { TodoContext } from "../TodoContext/TodoContext";
 
-export function TodoForm(props) {
-  const { setOpenModal, addTodos } = React.useContext(TodoContext);
-
+export function TodoForm({ setOpenModal, addTodos }) {
   const [newTodoValue, setNewTodoValue] = React.useState("");
 
   const iconsModal = {
