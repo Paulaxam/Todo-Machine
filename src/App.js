@@ -59,6 +59,7 @@ function App() {
           <TodoItem
             key={todo.text}
             text={todo.text}
+            createdAt={todo.createdAt}
             completed={todo.completed}
             onCompleted={() => completeTodos(todo.text)}
             onDelete={() => deleteTodos(todo.text)}

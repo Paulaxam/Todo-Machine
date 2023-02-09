@@ -30,9 +30,11 @@ export function useTodos() {
 
   const addTodos = (text) => {
     const newTodos = [...todos];
+    const creation = new Date().toLocaleDateString("en-GB");
     newTodos.push({
       text,
       completed: false,
+      createdAt: creation,
     });
     saveTodos(newTodos);
   };

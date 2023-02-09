@@ -28,6 +28,10 @@
         p {
             width: 70%;
             text-align: left;
+            .date {
+                opacity: .7;
+                @include font-size(14px);
+            }
         }
     }
 }

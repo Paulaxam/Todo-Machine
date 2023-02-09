@@ -22,8 +22,8 @@ function TodoItem(props) {
           onClick={props.onCompleted}
         ></img>
         <p>
+          <span className="date">{props.createdAt} </span>
           {props.text}
-          <span></span>
         </p>
         <img
           className="closeIcon"
