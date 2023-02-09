@@ -21,7 +21,10 @@ function TodoItem(props) {
           alt={iconsTodoItem.check.alt}
           onClick={props.onCompleted}
         ></img>
-        <p>{props.text}</p>
+        <p>
+          {props.text}
+          <span></span>
+        </p>
         <img
           className="closeIcon"
           src={iconsTodoItem.close.url}

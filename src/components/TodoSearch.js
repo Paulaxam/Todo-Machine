@@ -1,9 +1,8 @@
 import React from "react";
 
-function TodoSearch({ searchValue, setSearchValue }) {
+function TodoSearch({ searchValue, setSearchValue, loading }) {
   const onSearchValueChange = (event) => {
     setSearchValue(event.target.value);
-    console.log(searchValue);
   };
 
   return (
@@ -13,6 +12,7 @@ function TodoSearch({ searchValue, setSearchValue }) {
         placeholder="¿Buscas alguna tarea?"
         value={searchValue}
         onChange={onSearchValueChange}
+        disabled={loading}
       />
     </div>
   );

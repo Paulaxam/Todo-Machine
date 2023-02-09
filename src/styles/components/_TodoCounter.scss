@@ -7,4 +7,7 @@ h1 {
     font-family: $Font2;
     text-align: center;
     @include font-size(24px);
+    &--loading {
+        opacity: .3;
+    }
 }

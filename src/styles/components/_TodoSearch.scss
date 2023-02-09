@@ -20,6 +20,10 @@
         @include border-format(12px);
         @include font-size(18px);
         @include shadowTodo;
+        &:disabled {
+            background-color: $primary-color;
+            opacity: .3;
+        }
     }
 }
 

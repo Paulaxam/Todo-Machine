@@ -1,5 +1,4 @@
 import React from "react";
-import { TodoContext } from "../TodoContext/TodoContext";
 
 function CreateTodoButton(props) {
   const iconCreateBtn = {

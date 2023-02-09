@@ -1,0 +1,47 @@
+.changedStorage {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 20;
+    background-color: #b2afffc4;
+    &__container{
+        width: 80%;
+        height: 200px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        background-color: $light-color;
+        @include border-format(20px);
+        @include shadowTodo;
+        p {
+            width: 80%;
+            height: auto;
+            text-align: center;
+            @include font-size(24px);
+        }
+        button {
+            width: 50%;
+            height: 50px;
+            font-family: $Font2;
+            background-color: $primary-color;
+            @include font-size(30px);
+            @include border-format(8px);
+            @include shadowTodo;
+            transform: scale(1);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                transform: scale(1.1);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}
