@@ -30,7 +30,7 @@ export function useTodos() {
 
   const addTodos = (text) => {
     const newTodos = [...todos];
-    const creation = new Date().toLocaleDateString("en-GB");
+    const creation = new Date().toLocaleString("en-GB");
     newTodos.push({
       text,
       completed: false,
